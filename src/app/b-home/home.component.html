@@ -1,0 +1,82 @@
+<body>
+
+
+    <div id="body" class="container-fluid">
+
+
+
+        <div id="hero" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1> Unleashing the Tech Enthusiast in You!</h1>
+                    <p id="intro">Welcome to BlogTech, the ultimate destination for all your tech blogging needs!
+                        Whether you're a passionate tech enthusiast, a seasoned professional, or simply someone
+                        looking
+                        to stay up-to-date with the latest technological advancements, BlogTech is the perfect
+                        platform
+                        for you.
+
+                        At BlogTech, we believe in the power of sharing knowledge and ideas to foster innovation and
+                        growth in the tech industry. Our website provides a dynamic space where tech enthusiasts
+                        from
+                        all walks of life can come together to discuss, learn, and share their expertise.
+
+                        With an easy-to-use interface and a vibrant community, BlogTech offers a seamless blogging
+                        experience. Whether you want to write in-depth tutorials, review the latest gadgets, discuss
+                        emerging technologies, or share your personal tech experiences, our platform gives you the
+                        freedom to express yourself and connect with like-minded individuals.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contaier">
+            <div class="row">
+                <div class="col">
+                    <input (keyup)="search($event)" class="form-control w-50 mx-auto shadow-lg " type="text"
+                        placeholder=" Search">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- 19/03/23 -->
+
+        <!-- {{allBlogs|json}} -->
+
+        <div id="content" class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-md-4 " *ngFor="let blog of allBlogs | filter: searchKey :'id' ">
+
+                    <div class="card  mx-auto" id="blog"  style="width: 20rem;height: 28rem;">
+                        <div class="img">
+
+                            <img class="w-100" [src]="blog.image" alt="">
+                        </div>
+
+                        <div class="card-body" style="height: 210px;">
+
+
+                            <h4 class="card-title">{{blog.id}}</h4>
+
+                            <h6 class="card-subtitle mb-2 text-muted">By {{blog.author}}</h6>
+
+                            <div class="content-p">
+                                <p class="card-text">{{blog.content}}</p>
+
+                            </div>
+                            <a id="read" routerLink="/blog/view/{{blog.id}}" class="card-link">Reade more</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>

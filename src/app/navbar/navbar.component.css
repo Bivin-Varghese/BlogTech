@@ -1,0 +1,27 @@
+.navbar {
+    /* background-color: #FF9224; */
+    background-color: black;
+    color: white;
+    padding: 4px 4px;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar a {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.navbar a span {
+    color: #FF9224;
+}
+
+.navbar button {
+    background-color: #ff9124f1;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    padding:2px 6px;
+}

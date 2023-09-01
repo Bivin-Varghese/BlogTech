@@ -1,0 +1,45 @@
+<div class="container text-center ">
+    <h1 id="head" class="text-center">Update your blog</h1>
+
+    <!-- {{title}} -->
+    <!-- {{blog|json}}  -->
+
+    <div class="row justify-content-center">    
+        <div class="col text-center">
+            <!-- <input class="form-control w-75 border border-2 mt-4 mx-auto shadow-sm" type="" placeholder="Image"> -->
+            <div class="form-floating mb-4 border border-dark rounded-2 w-75 mx-auto shadow-sm">
+                <input [(ngModel)]="blog.id" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Title</label>
+            </div>
+
+
+            <div class="form-floating mb-4 border border-dark rounded-2 w-75 mx-auto shadow-sm">
+                <input [(ngModel)]="blog.author" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Author</label>
+            </div>
+
+
+            <div class="form-floating mb-4 border border-dark rounded-2 w-75 mx-auto shadow-sm">
+                <input [(ngModel)]="blog.image"  type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Image</label>
+            </div>
+
+
+            <!-- <textarea class="mt-4 form-control shadow-sm" name="" id="" cols="110" rows="12"
+                placeholder="Content"></textarea>
+
+        </div> -->
+
+            <div class="form-floating shadow-sm border border-dark rounded-2 ">
+                <textarea [(ngModel)]="blog.content"  class="form-control " placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 450px;"></textarea>
+                <label for="floatingTextarea2">Content</label>
+            </div>
+            <!-- <button class="btn bt w-50">Create</button> -->
+
+
+            <button (click)="update()" type="button" class=" btn btn-outline-success w-50 mt-4 border-3  ">Update</button>
+        </div>
+
+
+    </div>

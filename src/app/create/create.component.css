@@ -1,0 +1,15 @@
+button{
+    /* background-color: rgb(172, 73, 73); */
+    /* color: white; */
+    font-size: 18px;
+    font-weight: 700;
+    /* margin-top: 110px; */
+}
+
+#head{
+    font-family: 'Eczar', serif;
+    font-size: 58px;
+    margin-top: 20px;
+    font-weight: 500;
+    /* margin-bottom: 28px; */
+}

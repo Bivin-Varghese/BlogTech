@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-11">
+
+
+            <div class="c-img ">
+                <img class="img-fluid mx-auto " [src]='blog.image' alt="">
+            </div>
+
+
+            <!-- {{blog|json}} -->
+            <div class="content">
+                <h1>{{blog.id}}</h1>
+                <h4 class="text-muted">By {{blog.author}}</h4>
+                <p>{{blog.content}} </p>
+
+            </div>
+            <div class="button">
+                <button (click)="deleteBlogg(blog.id)" class="btn bg-danger">
+                    Delete
+                    <i class="fa-solid fa-trash"></i>      
+                      </button>
+                <button routerLink="/blog/update/{{blog.id}}" class="btn bg-secondary float-end">
+                    Edit
+                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
